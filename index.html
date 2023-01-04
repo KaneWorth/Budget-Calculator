@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Budget Calculator</title>
+  </head>
+  <body>
+    <!-- Title -->
+    <header class="header-container">
+      <h1>Budget Calculator</h1>
+    </header>
+
+    <!-- Main Content -->
+    <!-- Budget Input -->
+    <div class="monthly-budget-container">
+      <h2>Enter your monthly budget:</h2>
+      <input class="monthly-budget-amount" type="text" placeholder=" £" />
+      <input class="addNewBudget" type="button" value="add" />
+      <p class="budget-total"></p>
+    </div>
+
+    <!-- Items Input -->
+    <div class="items">
+      <h2>Enter your monthly expenditure:</h2>
+      <input class="budget-item-name" type="text" placeholder=" item:" />
+      <input class="budget-item-cost" type="text" placeholder=" £" />
+      <input class="addNewItem" type="button" value="add" />
+    </div>
+
+    <!-- What is left -->
+    <div class="remainder">
+      <h2>Total budget remaining:</h2>
+      <p class="total"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="copyRight">Copyright © Kane Worth 2022.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

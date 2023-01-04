@@ -1,0 +1,224 @@
+/* The colors that generated the hex background */
+/* #071525 + #121F38 + #065673 */
+/* https://mycolor.space/gradient3?ori=to+left+bottom&hex=%23071525&hex2=%23121F38&hex3=%23065673&submit=submit */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  width: auto;
+  color: #fff;
+  gap: 20px;
+  /* Gradient */
+  background-image: linear-gradient(
+    to left bottom,
+    #071525,
+    #091728,
+    #0b192c,
+    #0d1b2f,
+    #0f1d33,
+    #11223a,
+    #122740,
+    #132c47,
+    #123652,
+    #10405e,
+    #0c4b69,
+    #065673
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Budget Input */
+/* Title */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 28px;
+} /* ------------------------------------------ */
+
+/* Input */
+.monthly-budget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  text-align: center;
+  /* Background */
+  width: 400px;
+  margin: auto;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* Button */
+.addNewBudget {
+  height: 40px;
+  width: 100px;
+  font-size: 18px;
+  color: #fff;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.addNewBudget:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px rgba(255, 255, 255, 1);
+} /* ------------------------------------------ */
+
+/* Expense Input */
+/* Items Input */
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+  gap: 10px;
+  /* Background */
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  margin: auto;
+}
+.item-container:hover {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* Price and remove button */
+.price-remove-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Button */
+.addNewItem {
+  height: 40px;
+  width: 100px;
+  font-size: 18px;
+  color: #fff;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.addNewItem:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px rgba(255, 255, 255, 1);
+}
+/* Remove items button */
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background-color: #731127;
+  border: none;
+  border-radius: 5px;
+}
+.remove::before {
+  content: "\2716"; /* Unicode character for the cross symbol */
+  height: 22px !important;
+  width: 20px !important;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.remove:hover {
+  background-color: buttonface;
+  border: 1px solid;
+  transition: all 0.2s;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+} /* ------------------------------------------ */
+
+/* What is remaining */
+.remainder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  /* Background */
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.total {
+  font-size: 24px;
+} /* ------------------------------------------ */
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: auto;
+  font-size: 14px;
+} /* ------------------------------------------ */
+
+/* Input Areas */
+.monthly-budget-amount,
+.budget-item-name,
+.budget-item-cost {
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  font-size: 18px;
+} /* ------------------------------------------ */
+
+/* Container Box Hovers */
+.items:hover,
+.monthly-budget-container:hover,
+.remainder:hover {
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+} /* ------------------------------------------ */
+
+/* Smaller screens */
+@media screen and (max-width: 600px) {
+  /* Title */
+  header {
+    font-size: 26px;
+  }
+  /* Box width */
+  .monthly-budget-container,
+  .items,
+  .remainder {
+    width: 250px;
+  }
+  /* text areas */
+  input.budget-item-name,
+  input.budget-item-cost,
+  input.monthly-budget-amount,
+  .item-container {
+    width: 200px;
+  }
+  /* Add boxes */
+  .addNewBudget,
+  .addNewItem {
+    width: 200px;
+  }
+}
